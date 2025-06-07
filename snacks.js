@@ -131,8 +131,48 @@ const chefNavod = {
     }
 };
 
+
 🎯 Snack  (Bonus)
 Crea una funzione che permette la copia profonda (deep copy) di un oggetto, che copia anche i suoi metodi (proprietà che contengono funzioni). Usa l’oggetto di Code Question 6 come test.
 
 ⚠️ Serve usare una funzione ricorsiva! (fai un po’ di ricerca).
+
  */
+const chef = {
+    name: "Chef Hyur",
+    age: 29,
+    makeBurger: (num = 1) => {
+        console.log(`Ecco ${num} hamburger per te!`);
+    },
+    restaurant: {
+        name: "Hyur's Burgers",
+        welcomeClient: () => {
+            console.log("Benvenuto!");
+        },
+        address: {
+            street: 'Main Street',
+            number: 123,
+            showAddress: () => {
+                console.log("Main Street 123");
+            }
+        },
+        isOpen: true,
+    }
+}
+
+function deepClone(object) {
+    if (typeof object !== 'object' || object === null) {
+        return object
+    }
+    const chefClone = {}
+    for (const key in object) {
+        const value = object[key]
+        if (typeof value === 'object' && value !== null) {
+            chefClone[key] = deepClone(value)
+        } else {
+            chefClone[key] = value
+        }
+    }
+    return chefClone
+}
+console.log(deepClone(chef))
