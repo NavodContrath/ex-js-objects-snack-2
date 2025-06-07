@@ -120,7 +120,17 @@ const chef = {
         isOpen: true,
     }
 }
-Qual è il metodo migliore per clonare l’oggetto chef, e perché?
+Qual è il metodo migliore per clonare l’oggetto chef, e perché? lo spread operator per mantenere le  funzioni
+const chefNavod = {
+    ...chef,
+    restaurant: {
+        ...chef.restaurant,
+        address: {
+            ...chef.restaurant.address
+        }
+    }
+};
+
 🎯 Snack  (Bonus)
 Crea una funzione che permette la copia profonda (deep copy) di un oggetto, che copia anche i suoi metodi (proprietà che contengono funzioni). Usa l’oggetto di Code Question 6 come test.
 
