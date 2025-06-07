@@ -10,9 +10,8 @@ console.log(secondBurger.name ); // name: 'Double Cheese Burger'
 
 Senza lanciare il codice, riesci a prevedere cosa viene stampato in console? si.
 Quanti oggetti sono stati creati in memoria durante l'esecuzione di questo codice? 1
-🏆 Code Question 2
 
-console.log(ham
+🏆 Code Question 2
 const hamburger = { 
     name: "Cheese Burger", 
     weight: 250,
@@ -22,11 +21,12 @@ const hamburger = {
 const secondBurger = {...hamburger};
 secondBurger.ingredients[0] = "Salad";
 ​
-console.log(hamburger.ingredients[0]); // ?
-console.log(secondBurger.ingredients[0]); // ?
-P.S.: Ricordati che gli Array, come gli oggetti, sono dei Reference Type (Tipi di Riferimento)!
-Senza lanciare il codice, riesci a prevedere cosa viene stampato in console?
-Quanti oggetti sono stati creati in memoria durante l'esecuzione di questo codice?
+console.log(hamburger.ingredients[0]); // salad
+console.log(secondBurger.ingredients[0]); // salad
+
+Senza lanciare il codice, riesci a prevedere cosa viene stampato in console? si.
+Quanti oggetti sono stati creati in memoria durante l'esecuzione di questo codice? 2
+
 🏆 Code Question 3
 const hamburger = { 
     name: "Cheese Burger", 
