@@ -64,8 +64,10 @@ const restaurant = {
     openingDate: new Date(2025, 3, 11),
     isOpen: false,
 };
-Qual è il metodo migliore per clonare l’oggetto chef, e perché? in questo caso dovremmo usare lo spread perché non ha una struttura annidata,nonostante faccia solo riferimento al secondo oggetto accetta i metodi(funzioni) contenuti nelle proprietà. 
-Qual è il metodo migliore per clonare l’oggetto restaurant, e perché? in questo invece è meglio utilizzare uno stucturedClone() perché ci permette di mantenere la struttura annidata  e gestisce i dati complessi(date).
+Qual è il metodo migliore per clonare l’oggetto chef, e perché?
+in questo caso dovremmo usare lo spread perché non ha una struttura annidata e nonostante faccia solo riferimento al secondo oggetto accetta i metodi(funzioni) contenuti nelle proprietà. 
+Qual è il metodo migliore per clonare l’oggetto restaurant, e perché?
+in questo invece è meglio utilizzare uno stucturedClone() perché ci permette di mantenere la struttura annidata  e gestisce i dati complessi(date).
 
 🎯 Code Question 5 (Bonus)
 const hamburger = { 
@@ -89,12 +91,13 @@ const secondBurger = {...hamburger};
 secondBurger.maker.restaurant = newRestaurant;
 secondBurger.maker.name = "Chef Hyur";
 ​
-console.log(hamburger.maker.name); // ?
-console.log(secondBurger.maker.name); // ?
-console.log(hamburger.maker.restaurant.name); // ?
-console.log(secondBurger.maker.restaurant.name); // ?
-Senza lanciare il codice, riesci a prevedere cosa viene stampato in console?
-Quanti oggetti sono stati creati in memoria durante l'esecuzione di questo codice?
+console.log(hamburger.maker.name); // Chef Hyur
+console.log(secondBurger.maker.name); // Chef Hyur
+console.log(hamburger.maker.restaurant.name); // Hyur's II
+console.log(secondBurger.maker.restaurant.name); // Hyur's II
+Senza lanciare il codice, riesci a prevedere cosa viene stampato in console? si.
+Quanti oggetti sono stati creati in memoria durante l'esecuzione di questo codice?5
+
 🎯 Code Question 6 (Bonus)
 const chef = {
     name: "Chef Hyur",
