@@ -64,8 +64,9 @@ const restaurant = {
     openingDate: new Date(2025, 3, 11),
     isOpen: false,
 };
-Qual è il metodo migliore per clonare l’oggetto chef, e perché?
-Qual è il metodo migliore per clonare l’oggetto restaurant, e perché?
+Qual è il metodo migliore per clonare l’oggetto chef, e perché? in questo caso dovremmo usare lo spread perché non ha una struttura annidata,nonostante faccia solo riferimento al secondo oggetto accetta i metodi(funzioni) contenuti nelle proprietà. 
+Qual è il metodo migliore per clonare l’oggetto restaurant, e perché? in questo invece è meglio utilizzare uno stucturedClone() perché ci permette di mantenere la struttura annidata  e gestisce i dati complessi(date).
+
 🎯 Code Question 5 (Bonus)
 const hamburger = { 
     name: "Cheese Burger", 
